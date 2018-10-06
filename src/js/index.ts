@@ -14,6 +14,7 @@ export class GameEngine
     // items in the game
     public ball:Ball;
     public player1:Player;
+    public player2:Player;
  
     // canvas info
     public canvasWidth:number;
@@ -49,8 +50,10 @@ export class GameEngine
         //ceate gameobjects
         this.objects.push(new Framerate(new Vector(10,10)));
         
-        this.player1 = new Player(new Vector(20,10), this);
+        this.player1 = new Player(new Vector((this.canvasWidth-this.canvasWidth)+30,10), this);
+        this.player2 = new Player(new Vector(this.canvasWidth-30,10), this);
         this.objects.push(this.player1);
+        this.objects.push(this.player2);
 
         this.ball = new Ball(new Vector(this.canvasWidth/2, this.canvasHeight/2), this);
         this.objects.push(this.ball);

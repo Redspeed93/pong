@@ -6,8 +6,8 @@ import { GameObject } from './gameObject';
 */
 export class Framerate implements GameObject
 {
-    height: number;
-    width: number;
+    height: null;
+    width: null;
     onColliosion(other: GameObject): void {
     }
    
@@ -24,8 +24,8 @@ export class Framerate implements GameObject
 
 
     draw(ctx: CanvasRenderingContext2D): void {
-        ctx.fillStyle = "#ffffff";
-        ctx.fillText(""+Math.round(1000/this.time) + "fps", this.position.x, this.position.y);
+        ctx.fillStyle = "#00eeee";
+        //ctx.fillText(""+Math.round(1000/this.time) + "fps", this.position.x, this.position.y);
 
     }
 
